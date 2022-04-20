@@ -27,7 +27,7 @@ func resourceSiteKey() *schema.Resource {
 				Optional:  true,
 				Default:   4096,
 				Sensitive: false,
-				ForceNew:  true,
+				// ForceNew:  true,
 			},
 			"public_key": &schema.Schema{
 				Type:     schema.TypeString,
