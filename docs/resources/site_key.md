@@ -11,23 +11,35 @@ Creates a site key
 ## Example Usage
 
 ```hcl
-resource "site_key" "mykey" {
-  
+terraform {
+  required_providers {  
+    cloudux = {
+      source  = "AvidCloud/cloudux"
+      version = ">= 0.0.8"
+    }
+  }
 }
 
-output "publickey" {
-  filename = "/mypath/public_key.pem"
-  content     = site_key.mykey.public_key
+provider "cloudux" {
+  # Configuration options
 }
 
-output "publickey" {
-  filename = "/mypath/private_key.pem"
-  content     = site_key.mykey.private_key
+resource "cloudux_site_key" "example" {
+    // Optional:
+    // rsa_bits = 4096
 }
 
+output "public_key" {
+  value = cloudux_site_key.example.public_key
+}
+
+output "private_key" {
+  value = cloudux_site_key.example.private_key
+}
 ```
 
 
 ## Attribute Reference
+
 * `private_key` - The private key 
 * `public_key` - The public key 

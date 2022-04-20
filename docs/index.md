@@ -1,9 +1,9 @@
 ---
-page_title: "cloudux-uils Provider"
+page_title: "Cloudux Provider"
 description: |-
   Provides utilities for cloudux
 ---
 
-# cloudux-uils Provider
+# Cloudux Provider
 
-TODO
+Provides utilities for cloudux

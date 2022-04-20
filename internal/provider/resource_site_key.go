@@ -34,8 +34,9 @@ func resourceSiteKey() *schema.Resource {
 				Computed: true,
 			},
 			"private_key": &schema.Schema{
-				Type:     schema.TypeString,
-				Computed: true,
+				Type:      schema.TypeString,
+				Computed:  true,
+				Sensitive: true,
 			},
 		},
 	}
