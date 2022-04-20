@@ -1,10 +1,10 @@
+
 # Terraform Provider cloudux
 
-Run the following command to build the provider
+This is a provide which provides utilities for CloudUX deployment.
 
-```shell
-go build -o terraform-provider-cloudux
-```
+The provider is published to: https://registry.terraform.io/providers/AvidCloud/cloudux/
+
 
 ## Test sample configuration
 

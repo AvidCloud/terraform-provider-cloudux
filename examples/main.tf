@@ -2,7 +2,7 @@ terraform {
   required_providers {  
     cloudux = {
       source  = "AvidCloud/cloudux"
-      version = ">= 0.0.8"
+      version = ">= 0.0.9"
     }
   }
 }
@@ -22,4 +22,5 @@ output "public_key" {
 
 output "private_key" {
   value = cloudux_site_key.example.private_key
+  sensitive = true
 }
